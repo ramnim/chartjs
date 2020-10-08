@@ -1,3 +1,10 @@
+$ pub.bat global activate stagehand
+$stagehand.bat console-full
+$ pub.bat global activate webdev
+$ pub.bat global run webdev serve example
+
+
+
 A generated Dart API for [Chart.js](https://www.chartjs.org/)
 using [pkg/js](https://pub.dev/packages/js) and
 [dart_js_facade_gen](https://github.com/dart-lang/js_facade_gen).
