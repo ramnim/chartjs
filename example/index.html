@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chart.js and Dart interop example</title>
+    <script>
+      var Point = function(x, y) {
+        this.x = x;
+        this.y = y;
+        this.distanceFrom = function(otherPoint) {
+          return Math.sqrt(Math.pow(otherPoint.x - this.x, 2) +
+          Math.pow(otherPoint.y - this.y, 2));
+        };
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script defer type="application/javascript" src="example.dart.js"></script>
+    <!-- <script defer src="sample.js"></script> -->
+    <script>window.callDartFunc([]);</script>
+    <script>window.dartFunc();</script>
+    <script>window.callDartFunc();</script>
+    <script>window.dartFunc();</script>
+    <script>dartFunc();</script>
+    <script>callDartFunc();</script>
+    <style type="text/css">
+      body {
+        margin: 20px;
+      }
+      div.wrapper {
+        margin: 0 auto;
+        max-width: 800px;
+        text-align: center;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+    <div class="wrapper">
+      <canvas id="canvas" height="450" width="600"></canvas>
+      <p>Example of the <a href="https://github.com/google/chartjs.dart">Dart API for Chart.js</a></p>
+    </div>
+    </div>
+  </body>
+</html>
